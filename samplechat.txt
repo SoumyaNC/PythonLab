@@ -1,0 +1,33 @@
+User: I’m unable to activate my set-top box. It keeps giving errors.
+
+Agent: Have you checked your Wi-Fi connection recently?
+
+User: Yes, Wi-Fi is stable and working fine on all my devices.
+
+Agent: Great, so we can rule out Wi-Fi issues.
+
+Agent: Can you please provide the serial number on your box?
+
+User: It says SN-7890ABC.
+
+Agent: The system shows SN-7890ABD. That’s a serial number mismatch.
+
+User: That’s strange. It definitely shows ABC on my device.
+
+Agent: Sometimes scanning errors happen, I’ll override it manually.
+
+Agent: Next, the date of birth you provided?
+
+User: It is 10/10/1990.
+
+Agent: The DOB matches our records exactly, no issues there.
+
+Agent: However, I’m seeing a backend provisioning error currently affecting your account.
+
+User: So this backend error is the problem?
+
+Agent: Yes, backend provisioning error is blocking your activation.
+
+Agent: Let me escalate it to the backend team while overriding your serial.
+
+User: Thanks, I hope it resolves soon.
