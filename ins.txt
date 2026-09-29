@@ -1,0 +1,30 @@
+Create .github/copilot-instructions.md only (no app code).
+
+Project: Employee API, a dummy FastAPI + Pydantic + pytest REST API, in-memory data only.
+Endpoints: POST /employees, GET /employees, GET /employees/{id}, DELETE /employees/{id}.
+Employee fields: id (auto int), name, email, department, designation.
+
+Structure: app/routers (HTTP only), app/services (logic + in-memory store), app/schemas (Pydantic), app/main.py (create app, register routers), tests/.
+Rules: router -> service only; 201 create, 204 delete, 404 unknown id, 409 duplicate email; new entity = one file per layer; no new dependencies, database, or auth without asking.
+
+Keep it short, with specific rules only.
+
+
+---
+description: 'Python coding standards'
+applyTo: '**/*.py'
+---
+- Type hints on all functions and return values; async route handlers
+- One-line docstring on public functions
+- snake_case for functions, PascalCase for classes
+- routers/: HTTP only, call services, raise HTTPException with explicit status codes
+- services/: business logic and in-memory store; no FastAPI imports
+- schemas/: Pydantic models only; no logic
+- Place new code in the matching layer folder; main.py only creates the app and registers routers
+
+
+/create-agent Create code-reviewer.agent.md in .github/agents/.
+Role: read-only code reviewer for the Employee API. Never edit files.
+Steps: read .github/copilot-instructions.md and .github/instructions/*.instructions.md, then review the files I point to.
+Check: naming (snake_case functions/variables, PascalCase classes, plural router files, <entity>_service.py), type hints, one-line docstrings, code in the correct layer (routers/services/schemas), correct status codes, tests exist for each endpoint.
+Output: table of file, line, rule broken, suggested fix. If none found, say so.
