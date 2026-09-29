@@ -10,17 +10,16 @@ Rules: router -> service only; 201 create, 204 delete, 404 unknown id, 409 dupli
 Keep it short, with specific rules only.
 
 
----
-description: 'Python coding standards'
-applyTo: '**/*.py'
----
+/create-instructions Create python.instructions.md in .github/instructions/.
+applyTo: **/*.py
+Rules:
 - Type hints on all functions and return values; async route handlers
-- One-line docstring on public functions
-- snake_case for functions, PascalCase for classes
-- routers/: HTTP only, call services, raise HTTPException with explicit status codes
-- services/: business logic and in-memory store; no FastAPI imports
-- schemas/: Pydantic models only; no logic
-- Place new code in the matching layer folder; main.py only creates the app and registers routers
+- Docstring (one line) on public functions; snake_case functions, PascalCase classes
+- routers: HTTP only, call services, raise HTTPException with explicit status codes
+- services: business logic and in-memory store, no FastAPI imports
+- schemas: Pydantic models only, no logic
+- Place new code in the matching layer folder; never add logic to main.py
+Keep it short, specific rules only.
 
 
 /create-agent Create code-reviewer.agent.md in .github/agents/.
